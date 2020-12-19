@@ -17,7 +17,11 @@ class Account(Base):
 	name = Column(String(22))
 	age = Column(Integer)
 	height = Column(Float)
-	number = Column(String(22))
+	number = Column(String(35))
+        sex = Column(String(1))
+
+def add_method():
+    pass
 
 # 初始化数据库连接
 engine = create_engine("mysql+pymysql://root:123456@localhost:3306/userdb")
@@ -36,7 +40,3 @@ session.commit()
 # 关闭session
 session.close()
 
-
-
-
-print("end")
